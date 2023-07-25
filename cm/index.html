@@ -20,10 +20,78 @@
       z-index: 9999999;
       display: none;
     }
+
+    * {
+        margin:  0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 15px;
+      }
+      .arjs-loader {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .arjs-loader div {
+        text-align: center;
+        font-size: 1.25em;
+        color: white;
+        font-family: sans-serif;
+      }
+
+      .xx-loader {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .xx-loader div {
+        text-align: center;
+        font-size: 1.25em;
+        color: white;
+        font-family: sans-serif;
+      }
+
+      #xx {
+        display: block;
+      }
   </style>
-  
+
+    <script>
+      AFRAME.registerComponent('markerhandler', {
+         init: function () {
+           this.el.addEventListener('markerFound', () => {
+             var check = this.el.getAttribute("url");
+             // alert(check);
+             document.getElementById('whatever').style.display = "block";
+           });
+           
+           this.el.addEventListener('markerLost', () => {
+            document.getElementById('whatever').style.display = "none";
+           });
+         }
+       });
+   </script>
+
   </head>
-  <body>
+  <body style="margin: 0px; overflow: hidden;" onload="document.getElementById('xx').style.display='none'">
+    <div id="xx" class="xx-loader"><div>Loading, please wait...</div></div>
+    <div class="arjs-loader"><div>Loading, please wait...</div></div>
 
     <a-scene
     vr-mode-ui="enabled: false;"
@@ -49,19 +117,5 @@
   <div id="whatever"></div>
 
   </body>
-  <script>
-    AFRAME.registerComponent('markerhandler', {
-       init: function () {
-         this.el.addEventListener('markerFound', () => {
-           var check = this.el.getAttribute("url");
-           // alert(check);
-           document.getElementById('whatever').style.display = "block";
-         });
-         
-         this.el.addEventListener('markerLost', () => {
-          document.getElementById('whatever').style.display = "block";
-         });
-       }
-     });
- </script>
+
   </html>
