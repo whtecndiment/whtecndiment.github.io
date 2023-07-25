@@ -18,7 +18,7 @@
       left: 0;
       background-color: yellow;
       z-index: 9999999;
-      display: block;
+      display: none;
     }
   </style>
   
@@ -59,7 +59,7 @@
          });
          
          this.el.addEventListener('markerLost', () => {
-          document.getElementById('whatever').style.display = "none";
+          document.getElementById('whatever').style.display = "block";
          });
        }
      });
