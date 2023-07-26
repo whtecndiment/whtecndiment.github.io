@@ -7,7 +7,19 @@
     <script src="aframe-master.min.js"></script>
     <script src="aframe-ar-nft.js"></script>
   </head>
-
+  
+<style>
+  .birthday {
+      transform: translate(0, 0);
+      transition: transform .5s ease-in;
+    }
+  
+  #card {
+      transform: translate(-70%, -70%);
+      z-index: 10;
+    }
+</style>
+  
   <body style="margin: 0px; overflow: hidden;">
 
     <a-scene
@@ -25,7 +37,7 @@
         smoothTolerance=".1"
         smoothThreshold="50">
 
-          <img src="creativemediaexerciseone/birthdaycard">
+      <img id="card" class="birthday" src="./creativemediaexerciseone/birthdaycard.gif">
         
       </a-nft>
 
