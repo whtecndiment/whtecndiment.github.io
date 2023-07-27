@@ -13,13 +13,19 @@
     <style>
     #whatever {
       position: fixed;
-      width: 90vw;
-      height: 90vw;
+      width: 100vw;
+      height: 100vw;
       top: 10%;
       left: 10%;
       background-color: white;
       z-index: 9999999;
       display: none;
+    }
+
+    .card {
+      position: fixed;
+      width: 100vw;
+      height: 100vw;
     }
     
     * {
@@ -116,7 +122,7 @@
   </a-scene>
 
   <div id="whatever">
-    <img src="cm/birthdaycard">
+    <img class="card" src="cm/birthdaycard">
   </div>
 
   </body>
