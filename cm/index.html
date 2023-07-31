@@ -12,20 +12,21 @@
   <style>
     #whatever {
       position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 15%;
-      left: 0%;
+      width: 90vw;
+      height: 90vw;
+      top: 10%;
+      left: 0;
+      background-color: yellow;
       z-index: 9999999;
+      display: block;
     }
-    
+
     * {
         margin:  0;
         padding: 0;
         box-sizing: border-box;
         font-size: 15px;
       }
-    
       .arjs-loader {
         height: 100%;
         width: 100%;
@@ -99,7 +100,7 @@
       arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
 
       <a-nft
-        markerhandler
+      markerhandler
         type="nft"
         url="cm/marker"
         smooth="true"
@@ -113,9 +114,12 @@
   
   </a-scene>
 
-  <div id="whatever" src="birthdaycard.gif"></div>
+  <div id="whatever"></div>
 
-    
+  <div class="whatever">
+    <img src="birthdaycard.gif">
+  </div>
+  
   </body>
 
   </html>
