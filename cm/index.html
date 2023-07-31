@@ -15,7 +15,6 @@
       width: 100vw;
       height: 100vw;
       top: 10%;
-      left: 10%;
       background-color: white;
       z-index: 9999999;
       display: block;
@@ -31,7 +30,6 @@
         margin:  0;
         padding: 0;
         box-sizing: border-box;
-        font-size: 15px;
       }
       .arjs-loader {
         height: 100%;
@@ -100,7 +98,7 @@
     <div class="arjs-loader"><div>Loading, please wait...</div></div>
 
     <a-scene
-    vr-mode-ui="enabled: false;"
+      vr-mode-ui="enabled: false;"
       renderer="logarithmicDepthBuffer: true;"
       embedded
       arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
