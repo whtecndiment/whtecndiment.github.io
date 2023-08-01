@@ -86,9 +86,9 @@
              // alert(check);
              document.getElementById('whatever').style.display = "block";
            });
-
+           
            this.el.addEventListener('markerLost', () => {
-            document.querySelector('audio').pause()
+            document.querySelector('audio').pause() }
            
            this.el.addEventListener('markerLost', () => {
             document.getElementById('whatever').style.display = "none";
@@ -123,9 +123,12 @@
   
   </a-scene>
 
+  <audio controls autoplay>
+    <source src="birthaybeats.mp3" type="audio/mpeg"
+  </audio>
 
   <div id="whatever">
-    <img class="card" src="duck.gif" data-audio="birthdaybeats.mp3">
+    <img class="card" src="duck.gif">
   </div>
     
   </body>
