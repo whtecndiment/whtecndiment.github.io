@@ -86,6 +86,9 @@
              // alert(check);
              document.getElementById('whatever').style.display = "block";
            });
+
+           this.el.addEventListener('markerLost', () => {
+            document.querySelector('audio').pause()
            
            this.el.addEventListener('markerLost', () => {
             document.getElementById('whatever').style.display = "none";
@@ -119,6 +122,8 @@
     <a-entity camera></a-entity>
   
   </a-scene>
+
+  <audio src=""></audio>
 
   <div id="whatever">
     <img class="card" src="duck.gif" data-audio="birthdaybeats.mp3">
