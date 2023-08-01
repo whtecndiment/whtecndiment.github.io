@@ -85,13 +85,12 @@
              var check = this.el.getAttribute("url");
              // alert(check);
              document.getElementById('whatever').style.display = "block";
+             document.getElementById('haha').play()
            });
            
            this.el.addEventListener('markerLost', () => {
-            document.querySelector('audio').pause() }
-           
-           this.el.addEventListener('markerLost', () => {
             document.getElementById('whatever').style.display = "none";
+            document.querySelector('audio').pause()
            });
          }
        });
@@ -123,8 +122,8 @@
   
   </a-scene>
 
-  <audio controls autoplay>
-    <source src="birthaybeats.mp3" type="audio/mpeg"
+  <audio id="haha" controls autoplay>
+    <source src="birthaybeats.mp3" type="audio/mpeg">
   </audio>
 
   <div id="whatever">
@@ -133,8 +132,5 @@
     
   </body>
   
-  <script>
-    const audioPlayer = document.querySelector('audio')
-  </script>
   
   </html>
