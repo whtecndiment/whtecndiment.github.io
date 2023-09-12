@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jomolhari&family=Rubik+Iso&display=swap" rel="stylesheet">
+    </head>
+
+    <title>CONGRATULATIONS</title>
+
+    <script>
+        function directory() {
+        location.replace("http://localhost/museum/museumoutside/directory.html")
+        }
+    </script>
+
+    <style>
+    .paper {
+        width: 80%;
+        height: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        display: block;
+        border-width: 10px;
+        border-style: groove;
+        border-color: rgb(255, 174, 0);
+        background-color: rgb(24, 24, 24);
+    }
+
+    .titlecontainer {
+        width: 100%;
+        height: 280px;
+        padding-top: 3%;
+    }
+
+    .congratulation {
+        font-family: 'Jomolhari', serif;
+        font-family: 'Rubik Iso', cursive;
+        padding-top: 1%;
+        font-size: 190px;
+        text-align: center;
+        color: rgb(163, 4, 163);
+    }
+
+    .textcontainer {
+        width: 100%;
+        height: 200px;
+    }
+
+    .text {
+        font-family: 'Jomolhari', serif;
+        font-family: 'Rubik Iso', cursive;
+        padding-top: 1%;
+        font-size: 80px;
+        text-align: center;
+        color: rgb(163, 4, 163);
+    }
+
+    .tryagaincontainer {
+        width: 100%;
+        height: 300px;
+    }
+
+    .button {
+        font-family: 'Jomolhari', serif;
+        font-family: 'Rubik Iso', cursive;
+        font-size: 65px;
+        margin: 0;
+        position: absolute;
+        width: 68%;
+        top: 77.5%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        border-style: dashed;
+        border-width: 5px;
+        cursor: pointer;
+        border-color: rgb(163, 4, 163);
+        color: rgb(163, 4, 163);
+        background-color: rgb(24, 24, 24);
+        
+    }
+
+    .button:hover {
+        color: red;
+        background-color: rgb(163, 4, 163);
+        border-color: rgb(73, 8, 104);
+        transition: 1.5s;
+    }
+    </style>
+
+    <body>
+        <div class="paper">
+            <div class="titlecontainer">
+                <div class="congratulation">GREAT JOB!</div>
+            </div>
+            <div class="textcontainer">
+                <div class="text">YOU HAVE BROUGHT BACK ABSOLUTELY NOTHING!!!</div>
+            </div>
+            <div class="tryagaincontainer">
+                <button onclick="directory()" class="button">TRY AGAIN YOU WORTHLESS PIG</button>
+            </div>
+        </div>
+    </body>
+</html>>
