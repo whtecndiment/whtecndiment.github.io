@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoors</title>
+
+    <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+
+    <script>
+      AFRAME.registerComponent("door", {
+        init: function() {
+          this.el.addEventListener("click", (e) => {
+            location.replace("http://localhost/museum/museuminside/inside.html")
+          })
+        }
+      })
+    </script>
+
+  </head>
+
+  <body>
+
+    <a-scene>
+
+      <a-box id="door" material="transparent: true; depthTest: false" opacity="0" position="0.5 1.913 -21" scale="1.1 1.1 1.1" width="2.25" depth="2" height="5"
+        door></a-box>
+
+      <a-entity camera position="0 0 0" look-controls wasd-controls="acceleration: 13">
+        <a-cursor fuse="true" fuseTimeout="500" opacity="0.25" color="red"></a-cursor>
+      </a-entity>
+      
+      <a-entity light="type: directional; color: lightblue; intensity: 0.4" rotation="0 0 0" position="30 30 -3"></a-entity>
+      <a-entity light="type: ambient; color: lightblue; intensity: 0.4" rotation="0 0 0" position="30 30 -3"></a-entity>
+      <a-entity light="type: directional; color: white; intensity: 0.4" rotation="0 90 0" position="30 30 5"></a-entity>
+      <a-entity light="type: spot; color: red; intensity: 3" rotation="0 0 0" position="0 5 -13.1"></a-entity>
+      <a-entity light="type: probe; color: red; intensity: 1" rotation="0 0 0" position="0 8 -14"></a-entity>
+
+			<a-entity gltf-model="museum ext.gltf" scale="0.35 0.35 0.35" position="0 -1 -15" rotation="0 180 0"></a-entity>
+            
+      <a-sky color="#020415"></a-sky>
+    </a-scene>
+  
+  </body>
+</html>
